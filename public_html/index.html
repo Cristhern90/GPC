@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mandos</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="js/datatables/datatables.min.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <link href="js/datatables/datatables.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <style>
+            .dataTable tbody tr:hover{background-color: rgba(100,100,100,0.7);cursor: pointer;}
+            td{text-align: center;}
+        </style>
+    </head>
+    <body>
+        <h1>Mandos Disponibles</h1>
+        <table class="datetable">
+            <thead>
+                <tr>
+                    <th>Mando</th>
+                    <th>Botones</th>
+                    <th>Crucetas</th>
+                    <th>Sticks</th>
+                    <th>Dimenciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr onclick="window.open('Xbox/index.html')">
+                    <td>Xbox</td>
+                    <td>10+2</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>800x600</td>
+                </tr>
+                <tr onclick="window.open('XboxCarreras/index.html')">
+                    <td>Xbox con gatillos progresivos</td>
+                    <td>10+2</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>800x600</td>
+                </tr>
+                <tr onclick="window.open('Arcade/index.html')">
+                    <td>Arcade</td>
+                    <td>8+2</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>800x600</td>
+                </tr>
+                <tr onclick="window.open('Snes/index.html')">
+                    <td>Snes</td>
+                    <td>8+2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1349x676</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            $(document).ready(function () {
+                $(".datetable").DataTable();
+            });
+        </script>
+    </body>
+</html>

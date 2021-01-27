@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mando Xbox</title>
+        <script type="text/javascript" src="gamepadXbox.js"></script>
+        <style>
+            .other{display: none;}
+            .relative{position: relative;}
+            .Xbox .button{position: absolute;left: 24px;visibility: hidden;border: 0;padding: 0;width: auto;opacity: 0;}
+            .Xbox .button#button6{opacity: 1;visibility: visible}
+            .Xbox .button#button7{opacity: 1;visibility: visible}
+            .Xbox .button.pressed{position: absolute;left: 24px;visibility: visible;opacity: 1;}
+            .Xbox .button.pressed.left{left: 14px;}
+            .Xbox .button.pressed.right{left: 34px;}
+            .Xbox .button.pressed.down{top: 30px;}
+            .Xbox .button.pressed.up{top: 10px;}
+            .Xbox #divButton6{width: 100px;height: 90px;background: red;top: 31px;position: absolute;opacity: 0.7;z-index: 2}
+            .Xbox #divButton7{width: 100px;height: 90px;background: red;top: 31px;position: absolute;opacity: 0.7;left: 520px;z-index: 2}
+            
+            .axes {
+                padding: 1em;visibility: hidden;
+            }
+
+            .buttons {
+                margin-left: 1em;
+            }
+
+            /*meter*/.axis {
+                min-width: 200px;
+                margin: 1em;
+            }
+
+            .other .button {
+                display: inline-block;
+                width: 1em;
+                text-align: center;
+                padding: 1em;
+                border-radius: 20px;
+                border: 1px solid black;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAAxJREFUCNdjYPjPAAACAgEAqiqeJwAAAABJRU5ErkJggg==);
+                background-size: 0% 0%;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+
+            .pressed {
+                border: 1px solid red;
+            }
+
+            .touched::after {
+                content: "touch";
+                display: block;
+                position: absolute;
+                margin-top: -0.2em;
+                margin-left: -0.5em;
+                font-size: 0.8em;
+                opacity: 0.7;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h2 id="start">Press a button on your controller to start</h2>
+        
+    </body>
+</html>
