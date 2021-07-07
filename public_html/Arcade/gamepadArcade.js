@@ -34,9 +34,12 @@ function addgamepad(gamepad) {
 
     var b = document.createElement("div");
     b.className = "buttons";
+    var f = document.createElement("div");
+    f.className = "fondo";
     var img = document.createElement("img");
     img.setAttribute("src", "../imagenes/Arcade/mando2.png");
     img.setAttribute("class", "relative");
+    b.appendChild(f);
     b.appendChild(img);
 
     for (var i = 0; i < gamepad.buttons.length; i++) {
@@ -121,7 +124,7 @@ function updateStatus() {
                 var val = ax0.value;
 //                console.log(val);
                 var style = "";
-                var desp = val * 10;
+                var desp = val * 25;
                 if (val <= "-0.15") {
                     var b = document.getElementById("ArcadeButton10");
                     b.className += " pressed ";
@@ -136,7 +139,7 @@ function updateStatus() {
 
                 var ax1 = document.getElementById("arcadeAxis1");
                 var val = ax1.value;
-                var desp2 = val * 10;
+                var desp2 = val * 25;
                 if (val <= "-0.15") {
                     var b = document.getElementById("ArcadeButton10");
                     b.className += " pressed";
